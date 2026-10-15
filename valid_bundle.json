@@ -1,0 +1,24 @@
+{
+  "sources": [{
+    "id": "src-1", "title": "Example archive record", "origin": "archive:example",
+    "retrieved_at": "2026-10-13T00:00:00Z", "epistemic_type": "historical",
+    "status": "active", "fingerprint": "example-record-001"
+  }],
+  "observations": [{
+    "id": "obs-1", "source_id": "src-1", "statement": "Example documented statement",
+    "epistemic_type": "historical", "claim_key": "example-claim", "claim_value": "value-a"
+  }],
+  "rules": [{"id": "rule-1", "observation_ids": ["obs-1"], "epistemic_type": "research_hypothesis"}],
+  "scenarios": [{
+    "id": "scenario-1", "description": "An illustrative scenario, not a real-world prediction.",
+    "evidence": [
+      {"type": "source", "id": "src-1", "role": "supports"},
+      {"type": "observation", "id": "obs-1", "role": "context"},
+      {"type": "rule", "id": "rule-1", "role": "supports"}
+    ]
+  }],
+  "forecasts": [{
+    "id": "forecast-1", "scenario_id": "scenario-1", "probability": 0.4,
+    "probability_type": "probability", "calibration_status": "calibrated"
+  }]
+}
